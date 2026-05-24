@@ -265,7 +265,7 @@ h2 {
 .hero-visual {
   min-height: 614px;
   position: relative;
-  background-image: url("img/Hero.png");
+  background-image: url("img/Hero.jpg");
   background-position: center right;
   background-size: cover;
 }
@@ -380,7 +380,7 @@ h2 {
   min-height: 330px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background-image: url("img/map_info.png");
+  background-image: url("img/map_info.jpg");
 }
 
 .map-content > :not(.map-house) {
@@ -418,7 +418,7 @@ h2 {
 }
 
 .route-central {
-  background-image: url("img/Hero.png");
+  background-image: url("img/Hero.jpg");
 }
 
 .route-body {
@@ -2226,7 +2226,7 @@ body.menu-open .menu-button span:nth-child(3) {
   min-height: 374px;
   background-image:
     linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.92) 20%, rgba(255,255,255,0.38) 47%, rgba(255,255,255,0) 70%),
-    url("img/catalog_hero.png");
+    url("img/catalog_hero.jpg");
   background-size: cover;
   background-position: center right;
 }
@@ -2550,7 +2550,7 @@ body.menu-open .menu-button span:nth-child(3) {
   .catalog-hero-visual {
     min-height: 250px;
     order: -1;
-    background-image: url("img/catalog_hero.png");
+    background-image: url("img/catalog_hero.jpg");
   }
 
   .catalog-filter,
@@ -2720,7 +2720,7 @@ body.menu-open .menu-button span:nth-child(3) {
   min-height: 430px;
   background-image:
     linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.9) 24%, rgba(255,255,255,0.36) 53%, rgba(255,255,255,0) 77%),
-    url("img/gallery-21.png");
+    url("img/gallery-21.jpg");
   background-size: cover;
   background-position: center right;
 }
@@ -3071,7 +3071,7 @@ body.menu-open .menu-button span:nth-child(3) {
   .detail-hero-visual {
     min-height: 280px;
     order: -1;
-    background-image: url("img/gallery-21.png");
+    background-image: url("img/gallery-21.jpg");
   }
 
   .detail-tags {
@@ -3213,14 +3213,14 @@ body.menu-open .menu-button span:nth-child(3) {
 .detail-hero-visual {
   background-image:
     linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.9) 24%, rgba(255,255,255,0.36) 53%, rgba(255,255,255,0) 77%),
-    url("img/gallery-21.png") !important;
+    url("img/gallery-21.jpg") !important;
   background-size: cover;
   background-position: center right;
 }
 
 @media (max-width: 980px) {
   .detail-hero-visual {
-    background-image: url("img/gallery-21.png") !important;
+    background-image: url("img/gallery-21.jpg") !important;
   }
 }
 

@@ -274,7 +274,7 @@ function setupInteractiveMap() {
       text: 'Исторический доходный дом с выразительной парадной и атмосферой старого Петербурга.',
       style: 'Модерн',
       time: '10–15 минут',
-      image: 'img/1_1_block.png',
+      image: 'img/1_1_block.jpg',
       x: '26%',
       y: '45%'
     },
@@ -285,7 +285,7 @@ function setupInteractiveMap() {
       text: 'Камерный городской особняк, который хорошо подходит для маршрута по центральной части города.',
       style: 'Особняк',
       time: '8–12 минут',
-      image: 'img/2_2_block.png',
+      image: 'img/2_2_block.jpg',
       x: '35%',
       y: '48%'
     },
@@ -296,7 +296,7 @@ function setupInteractiveMap() {
       text: 'Камерный городской особняк, который хорошо подходит для маршрута по центральной части города.',
       style: 'Особняк',
       time: '8–12 минут',
-      image: 'img/2_2_block.png',
+      image: 'img/2_2_block.jpg',
       x: '35%',
       y: '48%'
     },
@@ -307,7 +307,7 @@ function setupInteractiveMap() {
       text: 'Доходный дом с насыщенной пластикой и выразительными деталями в исторической среде.',
       style: 'Эклектика',
       time: '12–18 минут',
-      image: 'img/1_3_block.png',
+      image: 'img/1_3_block.jpg',
       x: '54%',
       y: '64%'
     },
@@ -318,7 +318,7 @@ function setupInteractiveMap() {
       text: 'Выразительный объект с декоративными деталями, который добавляет маршруту интерьерный акцент.',
       style: 'Историзм',
       time: '10–15 минут',
-      image: 'img/1_2_block.png',
+      image: 'img/1_2_block.jpg',
       x: '63%',
       y: '64%'
     },
@@ -329,7 +329,7 @@ function setupInteractiveMap() {
       text: 'Заметный объект на Невском проспекте, удобный как точка маршрута в центральной части города.',
       style: 'Доходный дом',
       time: '10–15 минут',
-      image: 'img/2_1_block.png',
+      image: 'img/2_1_block.jpg',
       x: '66%',
       y: '54%'
     },
@@ -340,7 +340,7 @@ function setupInteractiveMap() {
       text: 'Доходный дом рядом с оживлённой городской осью, завершающий маршрут выразительной точкой.',
       style: 'Доходный дом',
       time: '10–15 минут',
-      image: 'img/2_3_block.png',
+      image: 'img/2_3_block.jpg',
       x: '70%',
       y: '73%'
     }
