@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Внутри Петербурга</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Внутри Петербурга — на главную">
+        <span class="brand-logo" aria-hidden="true">
+          <img src="img/logo.png" alt="" />
+        </span>
+        <span>Внутри Петербурга</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a class="nav-link active" data-nav="home" href="#top">Главная</a>
+        <a class="nav-link" data-nav="catalog" href="catalog.html">Парадные</a>
+        <a class="nav-link" data-nav="routes" href="#routes">Маршруты</a>
+        <a class="nav-link" data-nav="map" href="#map">Карта</a>
+        <a class="nav-link" data-nav="about" href="#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-card">
+      <div class="hero-content">
+        <p class="eyebrow">Архитектурные маршруты по Санкт-Петербургу</p>
+        <h1>Исследуйте парадные Санкт-Петербурга через маршруты, адреса и практические подсказки</h1>
+        <p class="lead">Находите интересные объекты, изучайте их историю и планируйте удобные прогулки по городу.</p>
+        <a class="button button-primary hero-button" href="#routes">Начать маршрут</a>
+      </div>
+
+      <div class="visual hero-visual" role="img" aria-label="Декоративный фрагмент парадной"></div>
+    </section>
+
+    <section class="section-card catalog-section" id="catalog">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="section-kicker">Каталог парадных</p>
+          <h2>Популярные объекты</h2>
+          <p class="section-description">Подборка наиболее известных и визуально выразительных парадных Санкт-Петербурга, которые позволяют познакомиться с архитектурой, историей и атмосферой старого города.</p>
+        </div>
+        <a class="button button-primary section-action" href="#">Все парадные</a>
+      </div>
+
+      <div class="object-grid">
+        <article class="object-card">
+          <img class="card-photo" src="img/1_1_block.png" alt="Доходный дом Саламандра" />
+          <div class="object-card-body">
+            <h3>Доходный дом страхового общества «Саламандра»</h3>
+            <p>Памятник архитектуры, построенный в 1908–1909 годах по проекту архитекторов Н. Н. Верёвкина и М. М.</p>
+            <div class="card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="object-card">
+          <img class="card-photo" src="img/1_2_block.png" alt="Особняк Кашина" />
+          <div class="object-card-body">
+            <h3>Особняк Кашина</h3>
+            <p>Объект с атмосферной лестницей, декоративными деталями и характером эпохи.</p>
+            <div class="card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="object-card">
+          <img class="card-photo" src="img/1_3_block.png" alt="Доходный дом Елисеева" />
+          <div class="object-card-body">
+            <h3>Доходный дом Елисеева</h3>
+            <p>Отдельные элементы фасада относят к модерну, псевдоготике и другим стилистическим направлениям.</p>
+            <div class="card-actions">
+              <a class="button button-primary" href="paradnaya.html">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card map-section" id="map">
+      <div class="map-content">
+        <p class="section-kicker">Карта</p>
+        <h2>Парадные на карте города</h2>
+        <p class="section-description">Подборка наиболее известных и визуально выразительных парадных Санкт-Петербурга, которые позволяют познакомиться с архитектурой, историей и атмосферой старого города.</p>
+        <a class="button button-primary wide-button" href="#">Открыть карту</a>
+        <img class="map-house" src="img/map_big_house.png" alt="" />
+      </div>
+
+      <div class="interactive-map" data-interactive-map>
+        <div class="map-canvas" aria-label="Интерактивная карта парадных Санкт-Петербурга">
+          <img class="map-bg" src="img/map_info.png" alt="Карта Санкт-Петербурга с отмеченными парадными" />
+
+          <svg class="map-route-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <polyline points="26,45 35,48 54,64 63,64 66,54 70,73"></polyline>
+          </svg>
+
+          <button class="map-marker is-active" type="button" style="--x: 26%; --y: 45%;" data-map-id="salamandra" aria-label="Доходный дом страхового общества Саламандра">
+            <span>1</span>
+          </button>
+          <button class="map-marker" type="button" style="--x: 35%; --y: 48%;" data-map-id="sleptsova" aria-label="Особняк Слепцова">
+            <span>2</span>
+          </button>
+          <button class="map-marker" type="button" style="--x: 54%; --y: 64%;" data-map-id="eliseeva" aria-label="Доходный дом Елисеева">
+            <span>3</span>
+          </button>
+          <button class="map-marker" type="button" style="--x: 63%; --y: 64%;" data-map-id="kanshina" aria-label="Особняк Каншина">
+            <span>4</span>
+          </button>
+          <button class="map-marker" type="button" style="--x: 66%; --y: 54%;" data-map-id="rul" aria-label="Дом Рюль, дом Г. Г. Блокка">
+            <span>5</span>
+          </button>
+          <button class="map-marker" type="button" style="--x: 70%; --y: 73%;" data-map-id="pertsova" aria-label="Доходный дом А. Н. Перцова">
+            <span>6</span>
+          </button>
+
+          <article class="map-popup" data-map-popup style="--popup-x: 18%; --popup-y: 38%;">
+            <button class="map-popup-close" type="button" aria-label="Закрыть карточку">×</button>
+            <img class="map-popup-img" src="img/1_1_block.png" alt="" data-popup-img />
+            <div class="map-popup-content">
+              <p class="map-popup-tag" data-popup-tag>Объект 1</p>
+              <h3 data-popup-title>Доходный дом страхового общества «Саламандра»</h3>
+              <p class="map-popup-address" data-popup-address>Гороховая улица, 6</p>
+              <p class="map-popup-text" data-popup-text>Атмосферная парадная с декоративными деталями и выразительной лестницей.</p>
+              <div class="map-popup-meta">
+                <span data-popup-style>Модерн</span>
+                <span data-popup-time>10–15 минут</span>
+              </div>
+              <a class="button button-primary map-popup-button" href="#">Подробнее</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="map-object-list" aria-label="Список объектов на карте">
+          <button class="map-list-item is-active" type="button" data-map-id="salamandra">
+            <span>01</span>
+            <strong>Саламандра</strong>
+          </button>
+          <button class="map-list-item" type="button" data-map-id="sleptsova">
+            <span>02</span>
+            <strong>Особняк Слепцова</strong>
+          </button>
+          <button class="map-list-item" type="button" data-map-id="eliseeva">
+            <span>03</span>
+            <strong>Дом Елисеева</strong>
+          </button>
+          <button class="map-list-item" type="button" data-map-id="kanshina">
+            <span>04</span>
+            <strong>Особняк Каншина</strong>
+          </button>
+          <button class="map-list-item" type="button" data-map-id="rul">
+            <span>05</span>
+            <strong>Дом Рюль</strong>
+          </button>
+          <button class="map-list-item" type="button" data-map-id="pertsova">
+            <span>06</span>
+            <strong>Дом Перцова</strong>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card routes-section" id="routes">
+      <div class="section-heading">
+        <p class="section-kicker">Маршруты</p>
+        <h2>Готовые варианты прогулок</h2>
+        <p class="section-description">В разделе собраны маршруты разной продолжительности и тематики, которые помогают изучать парадные Санкт-Петербурга последовательно и удобно.</p>
+      </div>
+
+      <div class="routes-grid">
+        <article class="route-card route-card-enhanced">
+          <div class="route-media">
+            <img class="route-photo" src="img/2_1_block.png" alt="Маршрут Центральный" />
+            <span class="route-badge">1,5 часа</span>
+          </div>
+          <div class="route-body">
+            <span class="route-number">Маршрут 1</span>
+            <h3>Центральный</h3>
+            <p class="route-desc">Классический маршрут по главным парадным исторического центра.</p>
+            <div class="route-line" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="route-meta">
+              <span>6 объектов</span>
+              <span>пешком</span>
+            </div>
+            <a class="button button-primary" href="#">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="route-card route-card-enhanced">
+          <div class="route-media">
+            <img class="route-photo" src="img/2_2_block.png" alt="Маршрут Атмосфера модерна" />
+            <span class="route-badge">2 часа</span>
+          </div>
+          <div class="route-body">
+            <span class="route-number">Маршрут 2</span>
+            <h3>Атмосфера модерна</h3>
+            <p class="route-desc">Прогулка с акцентом на декоративные детали, лестницы и пластику интерьеров.</p>
+            <div class="route-line" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="route-meta">
+              <span>5 объектов</span>
+              <span>архитектура</span>
+            </div>
+            <a class="button button-primary" href="#">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="route-card route-card-enhanced">
+          <div class="route-media">
+            <img class="route-photo" src="img/2_3_block.png" alt="Маршрут Быстрый" />
+            <span class="route-badge">45 минут</span>
+          </div>
+          <div class="route-body">
+            <span class="route-number">Маршрут 3</span>
+            <h3>Быстрый</h3>
+            <p class="route-desc">Короткий вариант для первого знакомства с парадными без длинной прогулки.</p>
+            <div class="route-line" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="route-meta">
+              <span>3 объекта</span>
+              <span>рядом с метро</span>
+            </div>
+            <a class="button button-primary" href="#">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="route-card route-card-enhanced">
+          <div class="route-media">
+            <img class="route-photo" src="img/2_4_block.png" alt="Маршрут Восточный" />
+            <span class="route-badge">1 час</span>
+          </div>
+          <div class="route-body">
+            <span class="route-number">Маршрут 4</span>
+            <h3>Восточный</h3>
+            <p class="route-desc">Спокойная прогулка с вечерним настроением и контрастными объектами.</p>
+            <div class="route-line" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="route-meta">
+              <span>4 объекта</span>
+              <span>вечерний</span>
+            </div>
+            <a class="button button-primary" href="#">Подробнее</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card info-section" id="info">
+      <div class="info-heading-wrap">
+        <div class="section-heading">
+          <p class="section-kicker">Практическая информация</p>
+          <h2>Что важно знать перед посещением</h2>
+          <p class="section-description">Полезные рекомендации, которые помогут заранее подготовиться к посещению парадных.</p>
+        </div>
+        <img class="faq-vector" src="img/FAQ_vector.png" alt="" />
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <p>Часы посещения</p>
+          <h3>Перед визитом уточняйте режим доступа и возможные ограничения на вход.</h3>
+        </article>
+
+        <article class="info-card">
+          <p>Правила поведения</p>
+          <h3>Соблюдайте тишину, не мешайте жителям и аккуратно относитесь к пространству.</h3>
+        </article>
+
+        <article class="info-card">
+          <p>Что взять с собой</p>
+          <h3>Удобную обувь, телефон для навигации и камеру для фотофиксации деталей.</h3>
+        </article>
+
+        <article class="info-card">
+          <p>Полезные пометки</p>
+          <h3>На сайте отмечены адрес, вход, примерное время осмотра и особенности объекта.</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card about-section" id="about">
+      <div class="about-content">
+        <p class="section-kicker">О нас</p>
+        <h2>О проекте “Внутри Петербурга”</h2>
+        <p class="section-description">Проект помогает собрать в одном месте информацию о парадных Санкт-Петербурга: адреса, маршруты, ориентиры, особенности посещения и визуальные материалы для предварительного знакомства с объектами.</p>
+        <img class="about-bridge" src="img/About_bridge_illustration.png" alt="" />
+      </div>
+
+      <img class="about-visual-img" src="img/About_right_illustration.png" alt="Светлая иллюстрация лестницы и арки" />
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h2>Внутри Петербурга</h2>
+        <p>Информационный проект о маршрутах, адресах и практической информации для знакомства с историческими парадными города.</p>
+        <div class="socials" aria-label="Социальные сети">
+          <a href="#" aria-label="MAX">
+            <img src="img/max.png" alt="" />
+          </a>
+          <a href="#" aria-label="VK">
+            <img src="img/vk.png" alt="" />
+          </a>
+        </div>
+        <p class="copyright">2026 Внутри Петербурга ©</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Навигация</h3>
+        <a href="#top">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="#routes">Маршруты</a>
+        <a href="#map">Карта</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Полезное</h3>
+        <a href="#">Контакты</a>
+        <a href="#">Частые вопросы</a>
+        <a href="#">Правила</a>
+        <a href="#about">О нас</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Контакты</h3>
+        <a href="mailto:example@mail.ru">example@mail.ru</a>
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

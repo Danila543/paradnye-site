@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Парадные Санкт-Петербурга — Внутри Петербурга</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="catalog">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Внутри Петербурга — на главную">
+        <span class="brand-logo" aria-hidden="true">
+          <img src="img/logo.png" alt="" />
+        </span>
+        <span>Внутри Петербурга</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a class="nav-link" data-nav="home" href="index.html">Главная</a>
+        <a class="nav-link active" data-nav="catalog" href="catalog.html">Парадные</a>
+        <a class="nav-link" data-nav="routes" href="index.html#routes">Маршруты</a>
+        <a class="nav-link" data-nav="map" href="index.html#map">Карта</a>
+        <a class="nav-link" data-nav="about" href="index.html#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="catalog-page" id="top">
+    <section class="catalog-hero section-card">
+      <div class="catalog-hero-content">
+        <p class="section-kicker">Каталог парадных</p>
+        <h1>Парадные Санкт-Петербурга</h1>
+        <p class="section-description">Подборка известных и атмосферных парадных города с адресами, историей, фотографиями и практической информацией для самостоятельного посещения.</p>
+      </div>
+      <div class="catalog-hero-visual" role="img" aria-label="Фрагмент парадной Санкт-Петербурга"></div>
+    </section>
+
+    <section class="catalog-filter section-card" aria-label="Поиск и фильтры каталога">
+      <div class="search-row">
+        <label class="search-field">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input type="search" data-catalog-search placeholder="Найти парадную по названию или адресу" />
+        </label>
+      </div>
+
+      <div class="filter-row">
+        <label class="select-field">
+          <select data-catalog-filter="district">
+            <option value="">Район</option>
+            <option value="center">Центр</option>
+          </select>
+        </label>
+
+        <label class="select-field">
+          <select data-catalog-filter="style">
+            <option value="">Стиль</option>
+            <option value="модерн">Модерн</option>
+            <option value="эклектика">Эклектика</option>
+            <option value="история">История</option>
+            <option value="лепнина">Лепнина</option>
+            <option value="классика">Классика</option>
+          </select>
+        </label>
+
+        <label class="select-field">
+          <select data-catalog-filter="access">
+            <option value="">Доступность</option>
+            <option value="open">Открытый вход</option>
+            <option value="limited">Уточнить доступ</option>
+          </select>
+        </label>
+
+        <label class="select-field">
+          <select data-catalog-filter="feature">
+            <option value="">Особенности</option>
+            <option value="винтовая лестница">Винтовая лестница</option>
+            <option value="лепнина">Лепнина</option>
+            <option value="история">История</option>
+            <option value="открытый вход">Открытый вход</option>
+          </select>
+        </label>
+
+        <button class="button button-primary filter-button" type="button" data-catalog-find>Найти</button>
+        <button class="button button-light filter-button" type="button" data-catalog-reset>Сбросить</button>
+      </div>
+    </section>
+
+    <section class="catalog-list section-card">
+      <div class="catalog-list-head">
+        <p data-catalog-count>Найдено 6 объектов</p>
+        <label class="select-field sort-field">
+          <select data-catalog-sort>
+            <option value="popular">Сначала популярные</option>
+            <option value="name">По названию</option>
+            <option value="address">По адресу</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="catalog-grid" data-catalog-grid>
+        <article class="catalog-card" data-title="Доходный дом Елисеева" data-address="Улица Ломоносова 14" data-district="center" data-style="модерн псевдоготика" data-access="limited" data-feature="винтовая лестница">
+          <img class="catalog-card-photo" src="img/catalog_block_1.png" alt="Доходный дом Елисеева" />
+          <div class="catalog-card-body">
+            <h2>Доходный дом Елисеева</h2>
+            <p>Отдельные элементы фасада относят к модерну, псевдоготике и другим стилистическим направлениям.</p>
+            <p class="catalog-address"><img src="img/point.png" alt="" />Улица Ломоносова 14</p>
+            <div class="catalog-tags">
+              <span>Центр</span>
+              <span>Винтовая лестница</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a class="button button-primary" href="paradnaya.html">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-title="Особняк Слепцова" data-address="Большая Конюшенная 9" data-district="center" data-style="история особняк" data-access="open" data-feature="история открытый вход">
+          <img class="catalog-card-photo" src="img/catalog_block_2.png" alt="Особняк Слепцова" />
+          <div class="catalog-card-body">
+            <h2>Особняк Слепцова</h2>
+            <p>Пространство выглядит сдержанно, но очень атмосферно и хорошо передаёт характер старого петербургского особняка.</p>
+            <p class="catalog-address"><img src="img/point.png" alt="" />Большая Конюшенная 9</p>
+            <div class="catalog-tags">
+              <span>Центр</span>
+              <span>История</span>
+              <span>Открытый вход</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-title="Доходный дом Салтыковой" data-address="Большая морская 51" data-district="center" data-style="эклектика" data-access="open" data-feature="открытый вход">
+          <img class="catalog-card-photo" src="img/catalog_block_3.png" alt="Доходный дом Салтыковой" />
+          <div class="catalog-card-body">
+            <h2>Доходный дом Салтыковой</h2>
+            <p>Парадная этого дома сочетает уютную камерность и выразительные архитектурные детали. Цветовые акценты и старинные элементы создают образ классического Петербурга.</p>
+            <p class="catalog-address"><img src="img/point.png" alt="" />Большая морская 51</p>
+            <div class="catalog-tags">
+              <span>Центр</span>
+              <span>Эклектика</span>
+              <span>Открытый вход</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-title="Особняк Каншина" data-address="Кузнечный переулок 6" data-district="center" data-style="лепнина" data-access="open" data-feature="лепнина открытый вход">
+          <img class="catalog-card-photo" src="img/catalog_block_4.png" alt="Особняк Каншина" />
+          <div class="catalog-card-body">
+            <h2>Особняк Каншина</h2>
+            <p>Яркая голубая гамма, декоративная лепнина и изящные детали делают интерьер очень узнаваемым.</p>
+            <p class="catalog-address"><img src="img/point.png" alt="" />Кузнечный переулок 6</p>
+            <div class="catalog-tags">
+              <span>Центр</span>
+              <span>Лепнина</span>
+              <span>Открытый вход</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-title="Доходный дом Саламандра" data-address="Большая Конюшенная улица 9" data-district="center" data-style="классика" data-access="limited" data-feature="сдержанная классика">
+          <img class="catalog-card-photo" src="img/catalog_block_5.png" alt="Доходный дом Саламандра" />
+          <div class="catalog-card-body">
+            <h2>Доходный дом «Саламандра»</h2>
+            <p>Парадная известна тёплой цветовой гаммой, арочными проходами и выразительной симметрией пространства.</p>
+            <p class="catalog-address"><img src="img/point.png" alt="" />Большая Конюшенная улица, 9</p>
+            <div class="catalog-tags">
+              <span>Центр</span>
+              <span>Сдержанная классика</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-title="Дом страхового общества Россия" data-address="Большая морская 37" data-district="center" data-style="история" data-access="open" data-feature="история открытый вход">
+          <img class="catalog-card-photo" src="img/catalog_block_6.png" alt="Дом страхового общества Россия" />
+          <div class="catalog-card-body">
+            <h2>Дом страхового общества Россия</h2>
+            <p>В облицовке использовались дорогие материалы: вюртембергский песчаник и красный гангутский гранит из Финляндии.</p>
+            <p class="catalog-address"><img src="img/point.png" alt="" />Большая морская 37</p>
+            <div class="catalog-tags">
+              <span>Центр</span>
+              <span>История</span>
+              <span>Открытый вход</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a class="button button-primary" href="#">Подробнее</a>
+              <a class="button button-light" href="#">В маршрут</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="catalog-empty" data-catalog-empty hidden>
+        По выбранным параметрам ничего не найдено. Попробуйте изменить фильтры.
+      </div>
+    </section>
+
+    <section class="catalog-cta section-card">
+      <div class="catalog-cta-visual" aria-hidden="true"></div>
+      <div class="catalog-cta-content">
+        <h2>Не знаете с чего начать?</h2>
+        <p>Мы собрали готовые маршруты по самым интересным парадным. Прогулки составлены по районам и темам.</p>
+      </div>
+      <a class="button button-primary catalog-cta-button" href="index.html#routes">Маршруты →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h2>Внутри Петербурга</h2>
+        <p>Информационный проект о маршрутах, адресах и практической информации для знакомства с историческими парадными города.</p>
+        <div class="socials" aria-label="Социальные сети">
+          <a href="#" aria-label="MAX">
+            <img src="img/max.png" alt="" />
+          </a>
+          <a href="#" aria-label="VK">
+            <img src="img/vk.png" alt="" />
+          </a>
+        </div>
+        <p class="copyright">2026 Внутри Петербурга ©</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Навигация</h3>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#routes">Маршруты</a>
+        <a href="index.html#map">Карта</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Полезное</h3>
+        <a href="#">Контакты</a>
+        <a href="#">Частые вопросы</a>
+        <a href="#">Правила</a>
+        <a href="index.html#about">О нас</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Контакты</h3>
+        <a href="mailto:example@mail.ru">example@mail.ru</a>
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
