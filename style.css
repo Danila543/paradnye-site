@@ -930,11 +930,6 @@ h2 {
   }
 }
 
-
-/* =========================
-   Motion layer
-   ========================= */
-
 .scroll-progress {
   position: fixed;
   left: 0;
@@ -1248,10 +1243,6 @@ body.menu-open .menu-button span:nth-child(3) {
   }
 }
 
-
-/* =========================
-   Interactive map
-   ========================= */
 
 .map-section {
   grid-template-columns: minmax(410px, 0.82fr) minmax(620px, 1.18fr);
@@ -1792,17 +1783,10 @@ body.menu-open .menu-button span:nth-child(3) {
     transform: translate(calc(-100% + 12%), calc(-100% - 16px)) scale(0.96);
   }
 }
-
-/* Левая декоративная иллюстрация в блоке карты теперь статичная */
 .map-house {
   animation: none !important;
   transform: none !important;
 }
-
-
-/* =========================
-   Popup over-page fix
-   ========================= */
 
 .section-card.map-section,
 .map-section,
@@ -1971,9 +1955,6 @@ body.menu-open .menu-button span:nth-child(3) {
 }
 
 
-/* =========================
-   Upgraded routes block
-   ========================= */
 
 .route-card-enhanced {
   background: #F7F4EF;
@@ -2184,10 +2165,6 @@ body.menu-open .menu-button span:nth-child(3) {
   }
 }
 
-
-/* =========================
-   Catalog page
-   ========================= */
 
 .catalog-page {
   margin-top: 55px;
@@ -2637,16 +2614,10 @@ body.menu-open .menu-button span:nth-child(3) {
   }
 }
 
-
-/* =========================
-   Footer social icons + catalog hero cleanup
-   ========================= */
-
 .catalog-hero.section-card {
   border: 0;
 }
 
-/* Иконки в футере теперь берутся из img/max.png и img/vk.png */
 .socials a {
   width: 31px;
   height: 31px;
@@ -2675,9 +2646,7 @@ body.menu-open .menu-button span:nth-child(3) {
 }
 
 
-/* =========================
-   Detail page
-   ========================= */
+
 
 .detail-page {
   margin-top: 55px;
@@ -2780,6 +2749,7 @@ body.menu-open .menu-button span:nth-child(3) {
   grid-template-columns: minmax(0, 1fr) 410px;
   gap: 30px;
   margin-top: 42px;
+  padding-bottom: 30px;
 }
 
 .detail-main,
@@ -3166,11 +3136,6 @@ body.menu-open .menu-button span:nth-child(3) {
 }
 
 
-/* =========================
-   Detail page blue accent fix
-   ========================= */
-
-/* На детальной странице используем только основной синий акцент */
 .detail-add-button,
 .detail-map-button,
 .detail-cta-button {
@@ -3182,7 +3147,6 @@ body.menu-open .menu-button span:nth-child(3) {
   background: var(--accent) !important;
 }
 
-/* В кнопке "Добавить в маршрут" используем point.png вместо декоративного кружка */
 .detail-add-button::after {
   display: none !important;
 }
@@ -3209,7 +3173,7 @@ body.menu-open .menu-button span:nth-child(3) {
   order: 1;
 }
 
-/* Подстраховка, чтобы hero точно показывал нужную фотографию */
+
 .detail-hero-visual {
   background-image:
     linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.9) 24%, rgba(255,255,255,0.36) 53%, rgba(255,255,255,0) 77%),
@@ -3225,9 +3189,7 @@ body.menu-open .menu-button span:nth-child(3) {
 }
 
 
-/* =========================
-   Detail hero seam + gallery filename fix
-   ========================= */
+
 
 .detail-hero.section-card {
   border: 0 !important;
