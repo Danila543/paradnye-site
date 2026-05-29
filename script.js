@@ -278,17 +278,6 @@ function setupInteractiveMap() {
       x: '26%',
       y: '45%'
     },
-    sleptсova: {
-      tag: 'Объект 2',
-      title: 'Особняк Слепцова',
-      address: 'Большая Конюшенная улица, 9',
-      text: 'Камерный городской особняк, который хорошо подходит для маршрута по центральной части города.',
-      style: 'Особняк',
-      time: '8–12 минут',
-      image: 'img/2_2_block.jpg',
-      x: '35%',
-      y: '48%'
-    },
     sleptsova: {
       tag: 'Объект 2',
       title: 'Особняк Слепцова',
@@ -347,7 +336,6 @@ function setupInteractiveMap() {
   };
 
   let activeId = 'salamandra';
-  let previewId = null;
 
   function fillPopup(point) {
     popupImg.src = point.image;
@@ -416,7 +404,6 @@ function setupInteractiveMap() {
     if (!point) return;
 
     activeId = id;
-    previewId = null;
     updateVisualState(id, 'active');
 
     const wasOpen = popup.classList.contains('is-open');
@@ -439,13 +426,11 @@ function setupInteractiveMap() {
 
   function previewPoint(id) {
     if (popup.classList.contains('is-open')) return;
-    previewId = id;
     updateVisualState(id, 'preview');
   }
 
   function clearPreview() {
     if (popup.classList.contains('is-open')) return;
-    previewId = null;
     updateVisualState(activeId, 'active');
   }
 
@@ -549,6 +534,7 @@ function setupCatalogPage() {
     return normalize([
       card.dataset.title,
       card.dataset.address,
+      card.dataset.building,
       card.dataset.style,
       card.dataset.feature,
       card.textContent
@@ -557,7 +543,7 @@ function setupCatalogPage() {
 
   function cardMatches(card) {
     const query = normalize(searchInput?.value);
-    const district = normalize(document.querySelector('[data-catalog-filter="district"]')?.value);
+    const building = normalize(document.querySelector('[data-catalog-filter="building"]')?.value);
     const style = normalize(document.querySelector('[data-catalog-filter="style"]')?.value);
     const access = normalize(document.querySelector('[data-catalog-filter="access"]')?.value);
     const feature = normalize(document.querySelector('[data-catalog-filter="feature"]')?.value);
@@ -565,12 +551,12 @@ function setupCatalogPage() {
     const haystack = getSearchHaystack(card);
 
     const queryMatch = !query || haystack.includes(query);
-    const districtMatch = !district || normalize(card.dataset.district).includes(district);
+    const buildingMatch = !building || normalize(card.dataset.building).includes(building);
     const styleMatch = !style || normalize(card.dataset.style).includes(style);
     const accessMatch = !access || normalize(card.dataset.access).includes(access);
     const featureMatch = !feature || normalize(card.dataset.feature).includes(feature);
 
-    return queryMatch && districtMatch && styleMatch && accessMatch && featureMatch;
+    return queryMatch && buildingMatch && styleMatch && accessMatch && featureMatch;
   }
 
   function sortCards(visibleCards) {
@@ -604,8 +590,15 @@ function setupCatalogPage() {
     sortCards(visibleCards);
 
     if (countLabel) {
-      const word = visibleCards.length === 1 ? 'объект' : 'объектов';
-      countLabel.textContent = `Найдено ${visibleCards.length} ${word}`;
+      const count = visibleCards.length;
+      const lastDigit = count % 10;
+      const lastTwoDigits = count % 100;
+      const word = lastDigit === 1 && lastTwoDigits !== 11
+        ? 'объект'
+        : lastDigit >= 2 && lastDigit <= 4 && (lastTwoDigits < 12 || lastTwoDigits > 14)
+          ? 'объекта'
+          : 'объектов';
+      countLabel.textContent = `Найдено ${count} ${word}`;
     }
 
     if (emptyState) {
@@ -637,10 +630,17 @@ function setupDetailPage() {
   const pagination = document.querySelector('[data-gallery-pagination]');
   const lightbox = document.querySelector('[data-lightbox]');
   const lightboxImg = document.querySelector('[data-lightbox-img]');
+  const lightboxTitle = document.querySelector('[data-lightbox-title]');
+  const lightboxAddress = document.querySelector('[data-lightbox-address]');
   const closeButton = document.querySelector('[data-lightbox-close]');
   const prevButton = document.querySelector('[data-lightbox-prev]');
   const nextButton = document.querySelector('[data-lightbox-next]');
   const galleryItems = [...document.querySelectorAll('[data-gallery-src]')];
+  const detailTitle = document.querySelector('.detail-hero h1')?.textContent.trim();
+  const detailAddress = document.querySelector('.detail-info .info-list dd')?.textContent.trim();
+
+  if (lightboxTitle && detailTitle) lightboxTitle.textContent = detailTitle;
+  if (lightboxAddress && detailAddress) lightboxAddress.textContent = detailAddress;
 
   addButton?.addEventListener('click', () => {
     const isAdded = addButton.classList.toggle('is-added');
@@ -716,7 +716,7 @@ function setupDetailPage() {
 
   function closeLightbox() {
     lightbox.hidden = true;
-    lightboxImg.src = '';
+    lightboxImg.removeAttribute('src');
     document.body.style.overflow = '';
   }
 

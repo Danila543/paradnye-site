@@ -57,9 +57,12 @@
 
       <div class="filter-row">
         <label class="select-field">
-          <select data-catalog-filter="district">
-            <option value="">Район</option>
-            <option value="center">Центр</option>
+          <select data-catalog-filter="building">
+            <option value="">Тип здания</option>
+            <option value="доходный дом">Доходный дом</option>
+            <option value="особняк">Особняк</option>
+            <option value="исторический дом">Исторический дом</option>
+            <option value="дом страхового общества">Дом страхового общества</option>
           </select>
         </label>
 
@@ -110,7 +113,7 @@
       </div>
 
       <div class="catalog-grid" data-catalog-grid>
-        <article class="catalog-card" data-title="Доходный дом Елисеева" data-address="Улица Ломоносова 14" data-district="center" data-style="модерн псевдоготика" data-access="limited" data-feature="винтовая лестница">
+        <article class="catalog-card" data-title="Доходный дом Елисеева" data-address="Улица Ломоносова 14" data-building="доходный дом" data-style="модерн псевдоготика" data-access="limited" data-feature="винтовая лестница">
           <img class="catalog-card-photo" src="img/catalog_block_1.jpg" alt="Доходный дом Елисеева" />
           <div class="catalog-card-body">
             <h2>Доходный дом Елисеева</h2>
@@ -127,7 +130,7 @@
           </div>
         </article>
 
-        <article class="catalog-card" data-title="Особняк Слепцова" data-address="Большая Конюшенная 9" data-district="center" data-style="история особняк" data-access="open" data-feature="история открытый вход">
+        <article class="catalog-card" data-title="Особняк Слепцова" data-address="Большая Конюшенная 9" data-building="особняк" data-style="история особняк" data-access="open" data-feature="история открытый вход">
           <img class="catalog-card-photo" src="img/catalog_block_2.jpg" alt="Особняк Слепцова" />
           <div class="catalog-card-body">
             <h2>Особняк Слепцова</h2>
@@ -145,7 +148,7 @@
           </div>
         </article>
 
-        <article class="catalog-card" data-title="Доходный дом Салтыковой" data-address="Большая морская 51" data-district="center" data-style="эклектика" data-access="open" data-feature="открытый вход">
+        <article class="catalog-card" data-title="Доходный дом Салтыковой" data-address="Большая морская 51" data-building="особняк исторический дом" data-style="эклектика" data-access="open" data-feature="открытый вход">
           <img class="catalog-card-photo" src="img/catalog_block_3.jpg" alt="Доходный дом Салтыковой" />
           <div class="catalog-card-body">
             <h2>Доходный дом Салтыковой</h2>
@@ -163,7 +166,7 @@
           </div>
         </article>
 
-        <article class="catalog-card" data-title="Особняк Каншина" data-address="Кузнечный переулок 6" data-district="center" data-style="лепнина" data-access="open" data-feature="лепнина открытый вход">
+        <article class="catalog-card" data-title="Особняк Каншина" data-address="Кузнечный переулок 6" data-building="особняк" data-style="лепнина" data-access="open" data-feature="лепнина открытый вход">
           <img class="catalog-card-photo" src="img/catalog_block_4.jpg" alt="Особняк Каншина" />
           <div class="catalog-card-body">
             <h2>Особняк Каншина</h2>
@@ -181,7 +184,7 @@
           </div>
         </article>
 
-        <article class="catalog-card" data-title="Доходный дом Саламандра" data-address="Большая Конюшенная улица 9" data-district="center" data-style="классика" data-access="limited" data-feature="сдержанная классика">
+        <article class="catalog-card" data-title="Доходный дом Саламандра" data-address="Большая Конюшенная улица 9" data-building="дом страхового общества доходный дом" data-style="классика" data-access="limited" data-feature="сдержанная классика">
           <img class="catalog-card-photo" src="img/catalog_block_5.jpg" alt="Доходный дом Саламандра" />
           <div class="catalog-card-body">
             <h2>Доходный дом «Саламандра»</h2>
@@ -198,7 +201,7 @@
           </div>
         </article>
 
-        <article class="catalog-card" data-title="Дом страхового общества Россия" data-address="Большая морская 37" data-district="center" data-style="история" data-access="open" data-feature="история открытый вход">
+        <article class="catalog-card" data-title="Дом страхового общества Россия" data-address="Большая морская 37" data-building="дом страхового общества" data-style="история" data-access="open" data-feature="история открытый вход">
           <img class="catalog-card-photo" src="img/catalog_block_6.jpg" alt="Дом страхового общества Россия" />
           <div class="catalog-card-body">
             <h2>Дом страхового общества Россия</h2>
@@ -237,6 +240,25 @@
       <div class="footer-about">
         <h2>Внутри Петербурга</h2>
         <p>Информационный проект о маршрутах, адресах и практической информации для знакомства с историческими парадными города.</p>
+      </div>
+
+      <div class="footer-column footer-column-nav">
+        <h3>Навигация</h3>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#routes">Маршруты</a>
+        <a href="index.html#map">Карта</a>
+      </div>
+
+      <div class="footer-column footer-column-useful">
+        <h3>Полезное</h3>
+        <a href="#">Контакты</a>
+        <a href="#">Частые вопросы</a>
+        <a href="#">Правила</a>
+        <a href="index.html#about">О нас</a>
+      </div>
+
+      <div class="footer-meta">
         <div class="socials" aria-label="Социальные сети">
           <a href="#" aria-label="MAX">
             <img src="img/max.png" alt="" />
@@ -248,23 +270,7 @@
         <p class="copyright">2026 Внутри Петербурга ©</p>
       </div>
 
-      <div class="footer-column">
-        <h3>Навигация</h3>
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="index.html#routes">Маршруты</a>
-        <a href="index.html#map">Карта</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>Полезное</h3>
-        <a href="#">Контакты</a>
-        <a href="#">Частые вопросы</a>
-        <a href="#">Правила</a>
-        <a href="index.html#about">О нас</a>
-      </div>
-
-      <div class="footer-column">
+      <div class="footer-column footer-column-contacts">
         <h3>Контакты</h3>
         <a href="mailto:example@mail.ru">example@mail.ru</a>
         <a href="tel:+79000000000">+7 (900) 000-00-00</a>

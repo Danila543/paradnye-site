@@ -197,7 +197,13 @@
   <div class="gallery-lightbox" data-lightbox hidden>
     <button class="lightbox-close" type="button" data-lightbox-close aria-label="Закрыть галерею">×</button>
     <button class="lightbox-arrow lightbox-prev" type="button" data-lightbox-prev aria-label="Предыдущее изображение">‹</button>
-    <img src="" alt="Увеличенное изображение из галереи" data-lightbox-img />
+    <figure class="lightbox-figure">
+      <img alt="Увеличенное изображение из галереи" data-lightbox-img />
+      <figcaption class="lightbox-caption">
+        <strong data-lightbox-title>Доходный дом Елисеева</strong>
+        <span data-lightbox-address>улица Ломоносова, 14</span>
+      </figcaption>
+    </figure>
     <button class="lightbox-arrow lightbox-next" type="button" data-lightbox-next aria-label="Следующее изображение">›</button>
   </div>
 
@@ -206,6 +212,25 @@
       <div class="footer-about">
         <h2>Внутри Петербурга</h2>
         <p>Информационный проект о маршрутах, адресах и практической информации для знакомства с историческими парадными города.</p>
+      </div>
+
+      <div class="footer-column footer-column-nav">
+        <h3>Навигация</h3>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#routes">Маршруты</a>
+        <a href="index.html#map">Карта</a>
+      </div>
+
+      <div class="footer-column footer-column-useful">
+        <h3>Полезное</h3>
+        <a href="#">Контакты</a>
+        <a href="#">Частые вопросы</a>
+        <a href="#">Правила</a>
+        <a href="index.html#about">О нас</a>
+      </div>
+
+      <div class="footer-meta">
         <div class="socials" aria-label="Социальные сети">
           <a href="#" aria-label="MAX">
             <img src="img/max.png" alt="" />
@@ -217,23 +242,7 @@
         <p class="copyright">2026 Внутри Петербурга ©</p>
       </div>
 
-      <div class="footer-column">
-        <h3>Навигация</h3>
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="index.html#routes">Маршруты</a>
-        <a href="index.html#map">Карта</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>Полезное</h3>
-        <a href="#">Контакты</a>
-        <a href="#">Частые вопросы</a>
-        <a href="#">Правила</a>
-        <a href="index.html#about">О нас</a>
-      </div>
-
-      <div class="footer-column">
+      <div class="footer-column footer-column-contacts">
         <h3>Контакты</h3>
         <a href="mailto:example@mail.ru">example@mail.ru</a>
         <a href="tel:+79000000000">+7 (900) 000-00-00</a>
