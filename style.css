@@ -697,14 +697,18 @@ h2 {
     left: 14px;
     right: 14px;
     top: 104px;
+    bottom: 14px;
     padding: 22px;
     border: 1px solid var(--border);
     border-radius: 16px;
     background: #F2EEE8;
     box-shadow: 0 18px 40px rgba(45, 42, 38, 0.12);
     display: grid;
-    gap: 10px;
+    align-content: start;
+    grid-auto-rows: minmax(54px, auto);
+    gap: 8px;
     font-size: 20px;
+    overflow-y: auto;
     transform: translateY(-16px);
     opacity: 0;
     pointer-events: none;
@@ -713,13 +717,15 @@ h2 {
   }
 
   body.menu-open .main-nav {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
     pointer-events: auto;
   }
 
   .nav-link {
-    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
   }
 
   main {
@@ -865,6 +871,14 @@ h2 {
 
   .header-inner {
     padding: 16px;
+  }
+
+  .main-nav {
+    left: 10px;
+    right: 10px;
+    top: 88px;
+    bottom: 10px;
+    padding: 20px;
   }
 
   .brand {
